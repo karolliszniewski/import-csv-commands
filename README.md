@@ -138,3 +138,36 @@ vim app/code/Custom/RemoveInvalidAttributes/registration.php
     'Custom_RemoveInvalidAttributes',
     __DIR__
 );
+
+
+
+
+Certainly, I can help you implement this as a Magento 2 command line command. We'll create a custom module with a console command that you can run using bin/magento removeinvalidattributes. Here's how to do it:
+Magento 2 module for removing invalid attributesClick to open code
+Now that we've created the module, here are the steps to implement and use it:
+
+Place all the files in their respective directories as shown in the file paths above.
+Enable the module:
+Copybin/magento module:enable Custom_RemoveInvalidAttributes
+
+Run setup upgrade:
+Copybin/magento setup:upgrade
+
+Compile the code:
+Copybin/magento setup:di:compile
+
+Clear the cache:
+Copybin/magento cache:clean
+
+
+Now you can run the command using:
+Copybin/magento custom:removeinvalidattributes
+This will execute the script to remove invalid attributes from your products.
+Important notes:
+
+Always backup your database before running this command.
+Test it on a staging or development environment first.
+This command will directly modify your product data, so use it with caution.
+For large catalogs, you might want to add batching logic to avoid memory issues.
+
+Would you like me to explain any part of this implementation in more detail?
